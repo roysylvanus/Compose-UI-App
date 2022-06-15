@@ -1,4 +1,4 @@
-package com.malikali.composeapp
+package com.malikali.composeapp.theme
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,17 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.malikali.composeapp.ui.theme.ComposeAppTheme
 
-class MainActivity : ComponentActivity() {
+class Splash : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeAppTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
+                    Greeting2("Android")
                 }
             }
         }
@@ -30,14 +27,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun Greeting2(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreview2() {
     ComposeAppTheme {
-        Greeting("Android")
+        Greeting2("Android")
     }
 }
